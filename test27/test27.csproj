@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC6E95E3-48A1-408D-B9B8-D7AB688B7C50}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>test27</RootNamespace>
+    <AssemblyName>test27</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="dna\databases\large.csv" />
+    <None Include="dna\databases\small.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dna\sequences\1.txt" />
+    <Content Include="dna\sequences\10.txt" />
+    <Content Include="dna\sequences\11.txt" />
+    <Content Include="dna\sequences\12.txt" />
+    <Content Include="dna\sequences\13.txt" />
+    <Content Include="dna\sequences\14.txt" />
+    <Content Include="dna\sequences\15.txt" />
+    <Content Include="dna\sequences\16.txt" />
+    <Content Include="dna\sequences\17.txt" />
+    <Content Include="dna\sequences\18.txt" />
+    <Content Include="dna\sequences\19.txt" />
+    <Content Include="dna\sequences\2.txt" />
+    <Content Include="dna\sequences\20.txt" />
+    <Content Include="dna\sequences\3.txt" />
+    <Content Include="dna\sequences\4.txt" />
+    <Content Include="dna\sequences\5.txt" />
+    <Content Include="dna\sequences\6.txt" />
+    <Content Include="dna\sequences\7.txt" />
+    <Content Include="dna\sequences\8.txt" />
+    <Content Include="dna\sequences\9.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

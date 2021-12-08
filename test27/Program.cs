@@ -24,12 +24,10 @@ namespace test27
             for (int y = 1; y < lines.Length; y++)
             {
                 string[] temp = lines[y].Split(',');
-                string t = null;
-                for (int j = 1; j < temp.Length; j++)
-                {
-                    t += temp[j];
-                }
-                dict.Add(t, temp[0]);
+                int index = lines[y].IndexOf(',');
+                string name = lines[y].Substring(0, index);
+                string t = lines[y].Substring(index+1);
+                dict.Add(t, name);
             }
             return dict;
         }
@@ -64,23 +62,20 @@ namespace test27
             string output = null;
             for (int x = 1; x < elements.Count; x++)
             {
-                output += CountingOneElement(dna, elements[x]);
+                output += CountingOneElement(dna, elements[x])+",";
             }
-            return output;
+            return output.Substring(0, output.Length-1);
         }
       
         public string Search(string dnaFileName)
         {
-            string output = "No Match.";
-            Dictionary<string, string> symbols = people;
-            
             string elementsCountSequence = CountingAllElementsOneFile(readDnaFromFile(dnaFileName));
 
-            if (symbols.ContainsKey(elementsCountSequence))
+            if (people.ContainsKey(elementsCountSequence))
             {
-                output = symbols[elementsCountSequence];
+                return people[elementsCountSequence];
             }
-            return output;
+            return "No Match!";
         }
 
         public void Print(string[,] symb)
